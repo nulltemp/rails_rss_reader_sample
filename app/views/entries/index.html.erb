@@ -1,0 +1,8 @@
+<h1>Entries#index</h1>
+<p>Find me in app/views/entries/index.html.erb</p>
+
+<% @entries.each do |entry| %>
+  <div>
+    <%= link_to entry.title, entry %> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i>
+  </div>
+<% end %>
